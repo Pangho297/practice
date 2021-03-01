@@ -1,5 +1,38 @@
 모든 내용은 VELOPERT.LOG를 보고 개인적으로 공부하기위해 필기, 실습한 예재들입니다.
 
+## 프로젝트 생성하기
+
+터미널에서 create-react-app을 이용해 프로젝트를 만들어줍니다.
+
+```
+npx create-react-app redux-counter
+```
+
+그 다음 redux-counter 디렉토리 내부로 들어가서 redux와 react-redux를 yarn을 이용해 설치하세요
+```
+yarn add redux react-redux
+```
+
+> react-redux는 reudx를 컴포넌트 상에서 더 간편하게 사용할 수 있게 해주는 라이브러리 입니다. 이걸 사용하면, 컴포넌트에서 스토어를 props로 받아오거나, subscribe를 직접 할 필요가 없습니다.
+
+### 프로젝트 초기화
+
+다음 파일들을 제거하세요 
+- App.css
+- App.js
+- APp.test.js
+- logo.svg
+
+### 디렉토리 생성
+
+src 디렉토리 내부에 다음과 같은 디렉토리를 만들어 주세요.
+각 디렉토리들의 기능들은 밑에서 설명합니다.
+- action
+- components
+- containers
+- reducers
+- utils
+
 ## Redux 스토어 생성
 
 스토어는 리덕스의 가장 핵심적인 인스턴스입니다.
