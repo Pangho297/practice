@@ -1,5 +1,7 @@
 모든 내용은 VELOPERT.LOG를 보고 개인적으로 공부하기위해 필기, 실습한 예재들입니다.
 
+이 브렌치는 Redux를 통한 React 어플리케이션 상태관리: 1장 카운터 만들기 글을 보고 만들어진 내용입니다.
+
 ## 프로젝트 생성하기
 
 터미널에서 create-react-app을 이용해 프로젝트를 만들어줍니다.
@@ -74,7 +76,7 @@ atcion은 하나의 객체입니다. 모든 액션 객체는 type이라는 값�
 그런데 이 값을 사용할때마다 모두 그냥 문자열로 사용한다면 관리하기 조금 히들어질수도 있는데요
 이 값들을 따로 파일을 만들어서 저장하면 조금 편리해집니다.
 
-파일로 만들어 사용하는 방법은 src/actions/ActionTypes.js를 참조하면 됩니다.
+파일로 만들어 사용하는 방법은 `src/actions/ActionTypes.js`를 참조하면 됩니다.
 
 #### 액션 생성자 만들기
 
@@ -82,7 +84,7 @@ atcion은 하나의 객체입니다. 모든 액션 객체는 type이라는 값�
 그래서 우리는 액션을 만드는 함수를 만들겠습니다.
 
 이를 **액션 생성자**라고 부릅니다. 
-액션 생성자를 만드는 방법은 src/action/index.js를 참조하면 됩니다.
+액션 생성자를 만드는 방법은 `src/action/index.js`를 참조하면 됩니다.
 
 ### components
 뷰만을 담당하는 presentational 컴포넌트들이 저장됩니다.
@@ -143,5 +145,5 @@ item컴포넌트 하나만 넣고 데이터를 연결해주는것도 가능합�
 ### utils
 일부 컴포넌트들에서 공용되는 파일이 저장됩니다.
 
-src/utils/index.js 파일은 색상을 랜덤으로 만들어주는 함수
-src/containers/CounterContainer.js에서 사용된다
+`src/utils/index.js` 파일은 색상을 랜덤으로 만들어주는 함수
+`src/containers/CounterContainer.js`에서 사용된다
