@@ -8,8 +8,8 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './reducers'
 
-// 스토어 생성
-const store = createStore(reducers);
+// 스토어 생성(Redux Devtool Extension)
+const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 // Provider 컴포넌트를 사용해 리액트 앱에 스토어 연동하기
 ReactDOM.render(

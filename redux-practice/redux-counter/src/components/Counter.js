@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Counter.css'
 
-const Counter = ({ number, color, onIncrement, onDecrement, onSetColor }) => {
+const Counter = ({ number, color, index, onIncrement, onDecrement, onSetColor }) => {
   return (
     <div
       className="Counter"
-      onClick={onIncrement}
+      onClick={() => onIncrement(index)}
       onContextMenu={ // 우클릭하여 메뉴가 열리는 이벤트
         (e) => { // 이 함수가 실행될 때 e.preventDefault()를 실행하면 메뉴가 열리지 않게됩니다.
           e.preventDefault();
-          onDecrement();
+          onDecrement(index);
         }
       }
-      onDoubleClick={onSetColor}
+      onDoubleClick={() => onSetColor(index)}
       style={{ backgroundColor: color }}>
       {number}
     </div>
@@ -21,6 +21,7 @@ const Counter = ({ number, color, onIncrement, onDecrement, onSetColor }) => {
 };
 
 Counter.propTypes = {
+  index: PropTypes.number,
   number: PropTypes.number,
   color: PropTypes.string,
   onIncrement: PropTypes.func,
@@ -29,6 +30,7 @@ Counter.propTypes = {
 };
 
 Counter.defaultProps = {
+  index: 0,
   number: 0,
   color: 'black',
   onIncrement: () => console.warn('onIncrement not defined'),
